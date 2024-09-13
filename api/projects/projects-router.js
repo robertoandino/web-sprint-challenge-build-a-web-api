@@ -72,6 +72,7 @@ router.get('/:id/actions', validateUserId, async (req, res, next) => {
 })
 
 //Middleware to handle errors
+//eslint-disable-next-line no-unused-vars
 router.use((err, req, res, next) => {
     res.status(err.status || 500).json({
         customMessage: "Error inside projects router",
